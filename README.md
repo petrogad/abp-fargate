@@ -31,6 +31,8 @@ There are a handful of steps necessary prior to executing the below to ensure a 
 
     This:
     *  Will then ask for your AWS Account keys (which you can generate on your IAM account)
+    
+1. Lastly, you need to make sure you've created an S3 bucket for your nested stack configurations.
 
 ## Setup
 
