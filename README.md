@@ -2,6 +2,36 @@
 
 An [aws-blueprint](https://github.com/rynop/aws-blueprint) example for a ECS fargate based app, with or without an ELB
 
+## Prerequisites
+
+There are a handful of steps necessary prior to executing the below to ensure a smooth sailing adventure as you setup your fargate configuration.
+
+1. Confirm you have wget on your machine. If you're running on OSX you'll need to install it (`brew install wget`).
+
+1. Confirm you have python installed. `python --version` should produce `Python 3.7.2` or greater. AWS CLI isn't well supported on `Python 2.x` so it's worth noting you should upgrade.
+     
+     Assuming OSX:
+     *  https://docs.python-guide.org/starting/install3/osx/
+     
+1. Confirm pip3 installed too. `pip3 --version`
+
+     If you see command not found AND installed python through brew, postinstall might not have executed:
+     *  `brew postinstall python3`
+     *  Otherwise check your path to confirm pip3's location is on it. 
+
+1. Install AWS CLI tool
+
+     Once you've installed python and `python --version` is producing the correct version you can install aws cli:
+     *  https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
+     
+1. Since this setup configuration relys on you having an account profile locally, and you *might* be working with multiple AWS accounts, now is a good time to configure your aws profiles.
+    ```
+    aws configure --profile my-aws-profile-name
+    ```
+
+    This:
+    *  Will then ask for your AWS Account keys (which you can generate on your IAM account)
+
 ## Setup
 
 1. Run the setup script from your local git repo dir: 
